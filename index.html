@@ -401,6 +401,7 @@ body {
   gap: 4px;
   font-family: var(--font-hand);
   font-size: var(--text-heading);
+  white-space: nowrap;
   font-weight: 500;
   line-height: 0.9;
   color: rgba(111,111,111,0.48);
@@ -1020,10 +1021,10 @@ body {
 }
 
 /* Short screens (16:9 laptops with URL bar, ≤ 750px height) */
-@media (max-height: 750px) and (min-width: 761px) {
+@media (max-height: 820px) and (min-width: 761px) {
   :root {
-    --frame-w: clamp(900px, min(calc(100vw - 400px), calc((100vh - 200px) * 1.6667)), 1300px);
-    --frame-h: calc(var(--frame-w) * 0.6);
+    --frame-h: min(calc(100vh - 200px), 560px);
+    --frame-w: calc(var(--frame-h) * 1.6667);
   }
   :root { --text-display: clamp(36px, 6vh, 56px); }
   .hero-text-side { padding: 40px 48px 40px 40px; }
@@ -1819,8 +1820,8 @@ window.addEventListener('touchmove', e => {
 }, { passive: true });
 
 // Parallax / zoom constants (from spec)
-const isShortScreen = window.innerHeight <= 750 && window.innerWidth > 760;
-const ZOOM_MAX    = isShortScreen ? 0.82 : 1.10;   // start more zoomed out on short screens
+const isShortScreen = window.innerHeight <= 820 && window.innerWidth > 760;
+const ZOOM_MAX    = isShortScreen ? 0.90 : 1.10;   // start more zoomed out on short screens
 const ZOOM_MIN    = 0.75;   // pull back to 75% (25% zoom-out)
 const ZOOM_END    = 0.20;   // zoom completes by the time slide 1 fully exits
 const PARALLAX_F  = 0.08;   // subtle inner drift — content stays in-frame
