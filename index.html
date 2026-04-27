@@ -1392,7 +1392,7 @@ body {
 
 <!-- Mode toggle -->
 <button class="mode-toggle" id="modeToggle" title="Switch to light mode" aria-label="Switch to light mode">
-  <span class="mode-toggle-icon" aria-hidden="true">○</span>
+  <span class="mode-toggle-icon" aria-hidden="true">☀︎</span>
 </button>
 
 <!-- Slide counter -->
@@ -2004,7 +2004,7 @@ const modeToggle = document.getElementById('modeToggle');
 function setTheme(t) {
   html.setAttribute('data-theme', t);
   const nextTheme = t === 'light' ? 'dark' : 'light';
-  modeToggle.querySelector('.mode-toggle-icon').textContent = t === 'light' ? '☽' : '○';
+  modeToggle.querySelector('.mode-toggle-icon').textContent = t === 'light' ? '☾' : '☀\uFE0E';
   modeToggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
   modeToggle.title = `Switch to ${nextTheme} mode`;
   localStorage.setItem('theme', t);
