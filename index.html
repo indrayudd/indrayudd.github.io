@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Portfolio</title>
+<title>Indrayudd Roy Chowdhury</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,6 +31,10 @@ html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   --font-sans:  'Manrope', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
   --font-mono:  'Fira Code', 'JetBrains Mono', Menlo, monospace;
   --font-hand:  'Caveat', 'Bradley Hand', cursive;
+  --text-display: 64px;
+  --text-heading: 28px;
+  --text-body:    16px;
+  --text-label:   14px;
   --ease:       cubic-bezier(.2,.8,.2,1);
   --frame-w:    clamp(1200px, min(calc(100vw - 520px), calc((100vh - 300px) * 1.6667)), 1500px);
   --frame-h:    calc(var(--frame-w) * 0.6);
@@ -118,7 +122,7 @@ body {
 
 .frame-label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-label);
   font-weight: 400;
   color: var(--fg-muted);
   letter-spacing: 0.1em;
@@ -153,7 +157,7 @@ body {
   left: 22px;
   z-index: 500;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-label);
   color: var(--fg-muted);
   display: flex;
   align-items: center;
@@ -186,7 +190,7 @@ body {
   padding: 0;
   display: grid;
   place-items: center;
-  font-size: 17px;
+  font-size: var(--text-body);
   line-height: 1;
   color: var(--fg-muted);
   cursor: pointer;
@@ -338,7 +342,7 @@ body {
   right: 22px;
   display: none;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   color: var(--fg-muted);
   letter-spacing: 0.1em;
   z-index: 500;
@@ -396,7 +400,7 @@ body {
   align-items: center;
   gap: 4px;
   font-family: var(--font-hand);
-  font-size: 24px;
+  font-size: var(--text-heading);
   font-weight: 500;
   line-height: 0.9;
   color: rgba(111,111,111,0.48);
@@ -409,7 +413,7 @@ body {
 .pfp-watermark::before {
   content: "↑";
   font-family: var(--font-sans);
-  font-size: 36px;
+  font-size: var(--text-heading);
   font-weight: 200;
   line-height: 0.72;
   letter-spacing: 0;
@@ -441,7 +445,7 @@ body {
 }
 .hero-line {
   display: block;
-  font-size: 76px;
+  font-size: var(--text-display);
   font-weight: 200;
   line-height: 1.12;
   color: var(--fg);
@@ -459,18 +463,18 @@ body {
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: var(--fg-muted);
   letter-spacing: 0.05em;
 }
 .hero-meta-pip {
-  width: 5px; height: 5px;
+  width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--tangerine);
+  background: #22C55E;
   flex-shrink: 0;
-  animation: pulse 2.5s ease-in-out infinite;
+  animation: pulse 1.4s ease-in-out infinite;
 }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.25} }
 
 /* Portrait / pfp */
 .pfp {
@@ -565,7 +569,7 @@ body {
   z-index: 2;
 }
 .projects-title {
-  font-size: 11px;
+  font-size: var(--text-label);
   font-family: var(--font-mono);
   color: var(--fg-muted);
   letter-spacing: 0.08em;
@@ -585,7 +589,7 @@ body {
 }
 .projects-count {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   color: var(--fg-muted);
   letter-spacing: 0.08em;
   opacity: 0.45;
@@ -596,7 +600,7 @@ body {
   position: absolute;
   top: 0; right: 0;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-label);
   color: var(--fg-muted);
   display: flex;
   align-items: center;
@@ -637,7 +641,7 @@ body {
 .project-card:hover .project-arrow { opacity: 1; transform: translate(0, 0); }
 .project-num {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   color: var(--tangerine);
   letter-spacing: 0.06em;
   opacity: 0.7;
@@ -648,14 +652,14 @@ body {
   transition: color 0.35s;
 }
 .project-name {
-  font-size: 24px;
+  font-size: var(--text-heading);
   font-weight: 600;
   color: var(--fg);
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 .project-desc {
-  font-size: 13.5px;
+  font-size: var(--text-body);
   color: var(--fg-muted);
   line-height: 1.7;
   flex: 1;
@@ -668,7 +672,7 @@ body {
 }
 .project-tag {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   color: var(--teal);
   background: color-mix(in srgb, var(--teal) 9%, transparent);
   padding: 3px 8px;
@@ -682,7 +686,7 @@ body {
 .project-arrow {
   position: absolute;
   top: 28px; right: 32px;
-  font-size: 16px;
+  font-size: var(--text-body);
   color: var(--tangerine);
   opacity: 0;
   transform: translate(-5px, 5px);
@@ -708,7 +712,7 @@ body {
 }
 .about-content { max-width: 840px; }
 .about-manifesto {
-  font-size: 54px;
+  font-size: var(--text-display);
   font-weight: 200;
   line-height: 1.22;
   color: var(--teal);
@@ -719,7 +723,7 @@ body {
 .about-em { color: var(--tangerine); font-style: normal; font-weight: 700; }
 .about-sub {
   margin-top: 36px;
-  font-size: 15px;
+  font-size: var(--text-body);
   line-height: 1.75;
   max-width: 520px;
   color: color-mix(in srgb, var(--teal) 70%, transparent);
@@ -732,7 +736,7 @@ body {
   align-items: center;
   gap: 12px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: color-mix(in srgb, var(--teal) 45%, transparent);
   letter-spacing: 0.06em;
 }
@@ -748,7 +752,7 @@ body {
   position: absolute;
   top: 28px; left: 36px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-label);
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
@@ -822,7 +826,7 @@ body {
 /* shared link-row styles */
 .links-frame-header {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-label);
   color: #3A5A6A;
   margin-bottom: 36px;
   letter-spacing: 0.06em;
@@ -856,7 +860,7 @@ body {
 [data-theme="light"] .link-row:hover .link-name { color: #0A0800 !important; }
 .link-ssh-prompt {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: var(--text-body);
   color: #3A5A6A;
   width: 28px;
   flex-shrink: 0;
@@ -864,7 +868,7 @@ body {
   padding-top: 2px;
 }
 .link-name {
-  font-size: 52px;
+  font-size: var(--text-display);
   font-weight: 300;
   color: #8AAEBD;
   letter-spacing: -0.02em;
@@ -874,7 +878,7 @@ body {
 }
 .link-ssh-addr {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: #3A5A6A;
   opacity: 0.5;
   letter-spacing: 0.04em;
@@ -884,7 +888,7 @@ body {
 }
 .link-row-arrow {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: var(--tangerine);
   opacity: 0;
   transform: translateX(-6px);
@@ -909,14 +913,14 @@ body {
 .connect-frame .term-header { color: var(--fg-muted); opacity: 0.5; }
 .connect-label {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: var(--fg-muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 .connect-email-btn {
-  font-size: 44px;
+  font-size: var(--text-display);
   font-weight: 300;
   color: var(--fg);
   cursor: pointer;
@@ -960,7 +964,7 @@ body {
 }
 .connect-social-link {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-body);
   color: var(--fg-muted);
   text-decoration: none;
   letter-spacing: 0.06em;
@@ -978,7 +982,7 @@ body {
   align-items: center;
   gap: 9px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--text-body);
   color: var(--fg-muted);
   letter-spacing: 0.05em;
 }
@@ -986,7 +990,7 @@ body {
   width: 6px; height: 6px;
   border-radius: 50%;
   background: #22C55E;
-  animation: pulse 2.4s ease-in-out infinite;
+  animation: pulse 1.4s ease-in-out infinite;
   flex-shrink: 0;
 }
 
@@ -1012,11 +1016,31 @@ body {
     --frame-w: min(1200px, 90vw);
     --frame-h: min(720px, calc(90vw * 0.6));
   }
-  .hero-line { font-size: clamp(32px, 5.5vw, 68px); }
-  .about-manifesto { font-size: clamp(28px, 4vw, 54px); }
-  .link-name { font-size: clamp(32px, 5vw, 60px); }
-  .connect-email-btn { font-size: clamp(28px, 4vw, 50px); }
-  .project-name { font-size: clamp(18px, 2vw, 24px); }
+  :root { --text-display: clamp(36px, 5vw, 64px); --text-heading: clamp(20px, 2.2vw, 28px); }
+}
+
+/* Short screens (16:9 laptops with URL bar, ≤ 750px height) */
+@media (max-height: 750px) and (min-width: 761px) {
+  :root {
+    --frame-w: clamp(900px, min(calc(100vw - 400px), calc((100vh - 200px) * 1.6667)), 1300px);
+    --frame-h: calc(var(--frame-w) * 0.6);
+  }
+  :root { --text-display: clamp(36px, 6vh, 56px); }
+  .hero-text-side { padding: 40px 48px 40px 40px; }
+  .hero-meta { margin-top: 24px; }
+  .hero-logo-side { width: 340px; }
+  .pfp { width: 220px; height: 220px; }
+  .pfp-graph { top: calc((220px - var(--frame-h)) / 2); }
+  .about-frame > .fp { padding: 56px 64px; }
+  .about-sub { margin-top: 24px; }
+  .about-footnote { margin-top: 28px; }
+  .links-frame > .fp { padding: 52px 72px 40px; }
+  .link-row { padding: 14px 0; }
+  .connect-frame > .fp { padding: 44px; }
+  .connect-rule { height: 28px; margin: 24px auto; }
+  .connect-status { margin-top: 32px; }
+  .projects-inner { padding: 36px 48px 36px; gap: 20px; }
+  .project-card { padding: 20px 28px; gap: 8px; }
 }
 
 @media (max-width: 760px) {
@@ -1257,29 +1281,28 @@ body {
 /* ═══════════════════ NAV HINT ARROW ═══════════════════ */
 .nav-hint {
   position: fixed;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%) translateX(0);
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
   z-index: 500;
   color: var(--fg-muted);
   opacity: 0.65;
   pointer-events: none;
   transition: opacity 0.7s ease;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 6px;
   animation: navNudge 1.9s ease-in-out infinite;
+}
+@keyframes navNudge {
+  0%, 100% { transform: translateX(-50%) translateY(0px); }
+  50%       { transform: translateX(-50%) translateY(5px); }
 }
 .nav-hint.hidden { opacity: 0; }
 .nav-hint-label {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: var(--text-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
   color: var(--fg-muted);
   opacity: 0.6;
 }
@@ -1294,10 +1317,6 @@ body {
 [data-theme="dark"] .nav-hint-label {
   color: currentColor;
   opacity: 0.86;
-}
-@keyframes navNudge {
-  0%, 100% { transform: translateY(-50%) translateX(0px); }
-  50%       { transform: translateY(-50%) translateX(7px); }
 }
 
 /* ═══════════════════ TWEAKS PANEL ═══════════════════ */
@@ -1319,7 +1338,7 @@ body {
 .tweaks-panel.open { display: flex; }
 .tweaks-title {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-muted);
@@ -1332,13 +1351,13 @@ body {
 }
 .tweak-label {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: var(--text-label);
   color: var(--fg-muted);
   letter-spacing: 0.05em;
 }
 .tweak-input {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: var(--text-label);
   color: var(--fg);
   background: var(--canvas);
   border: 1px solid var(--border);
@@ -1408,7 +1427,7 @@ body {
             </div>
             <div class="hero-meta">
               <div class="hero-meta-pip"></div>
-              <span id="heroMeta">Available for work &middot; 2026</span>
+              <span id="heroMeta">Available for Work &middot; San Francisco &middot; 2026</span>
             </div>
           </div>
         </div>
@@ -1497,7 +1516,7 @@ body {
           </p>
           <div class="about-footnote" data-px="0.01">
             <div class="about-footnote-line"></div>
-            <span>Based in San Francisco &middot; Open to Remote</span>
+            <span>Based in San Francisco &middot; Open to Relocate</span>
           </div>
         </div>
         </div>
@@ -1555,7 +1574,7 @@ body {
         </div>
         <div class="connect-status">
           <div class="status-dot"></div>
-          <span>Open to new opportunities · San Francisco</span>
+          <span>Available for Work &middot; San Francisco &middot; 2026</span>
         </div>
         </div>
       </div>
@@ -1583,11 +1602,8 @@ body {
   <span class="scroller-arrow next"><span class="scroller-slash"></span></span>
 </div>
 
-<!-- Nav hint arrow (right) -->
+<!-- Nav hint (above scroller) -->
 <div class="nav-hint" id="navHint" aria-hidden="true">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-    <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
   <span class="nav-hint-label">scroll</span>
 </div>
 
@@ -1624,7 +1640,7 @@ body {
 const CONST_TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "name": "Indro",
   "email": "indrayudd1@gmail.com",
-  "meta": "Available for work · 2026",
+  "meta": "Available for Work · San Francisco · 2026",
   "accent": "#FF7D00"
 }/*EDITMODE-END*/;
 
@@ -1803,7 +1819,8 @@ window.addEventListener('touchmove', e => {
 }, { passive: true });
 
 // Parallax / zoom constants (from spec)
-const ZOOM_MAX    = 1.10;   // start slightly zoomed in
+const isShortScreen = window.innerHeight <= 750 && window.innerWidth > 760;
+const ZOOM_MAX    = isShortScreen ? 0.95 : 1.10;   // start more zoomed out on short screens
 const ZOOM_MIN    = 0.75;   // pull back to 75% (25% zoom-out)
 const ZOOM_END    = 0.20;   // zoom completes by the time slide 1 fully exits
 const PARALLAX_F  = 0.08;   // subtle inner drift — content stays in-frame
@@ -1935,12 +1952,10 @@ if (mobileGalleryQuery.addEventListener) {
 
 window.addEventListener('wheel', e => {
   const mobile = isMobileGallery();
-  const horizontalIntent = Math.abs(e.deltaX) > Math.abs(e.deltaY) || e.shiftKey;
-  if (!mobile && !horizontalIntent) return;
-  const delta = mobile
-    ? e.deltaY
-    : (e.shiftKey && Math.abs(e.deltaX) < Math.abs(e.deltaY) ? e.deltaY : e.deltaX);
-  scrollTarget = clampScroll(scrollTarget + delta);
+  // Vertical scroll moves slides; horizontal scroll is ignored here (spins graph instead)
+  const verticalIntent = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+  if (!mobile && !verticalIntent) return;
+  scrollTarget = clampScroll(scrollTarget + e.deltaY);
   syncNavHintVisibility();
   e.preventDefault();
 }, { passive: false });
@@ -2229,7 +2244,10 @@ function updatePulses() {
 // ── Scroll/auto rotation ──
 let autoRotY = 0, scrollRotY = 0, scrollRotX = 0, scrollVelY = 0, scrollVelX = 0;
 window.addEventListener('wheel', e => {
-  scrollVelY += e.deltaY * 0.0003;
+  // Horizontal scroll spins the graph
+  if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+    scrollVelY += e.deltaX * 0.0003;
+  }
 }, { passive: true });
 
 // ── Drag ──
