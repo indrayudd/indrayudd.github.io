@@ -1392,7 +1392,7 @@ body {
 
 <!-- Mode toggle -->
 <button class="mode-toggle" id="modeToggle" title="Switch to light mode" aria-label="Switch to light mode">
-  <span class="mode-toggle-icon" aria-hidden="true">☀</span>
+  <span class="mode-toggle-icon" aria-hidden="true">○</span>
 </button>
 
 <!-- Slide counter -->
@@ -1982,7 +1982,8 @@ document.addEventListener('touchmove', e => {
   if (!hasTouchX) return;
   const x = e.touches[0].clientX;
   const y = e.touches[0].clientY;
-  const delta = isMobileGallery() ? (lastTouchY - y) : (lastTouchX - x);
+  const raw = isMobileGallery() ? (lastTouchY - y) : (lastTouchX - x);
+  const delta = isMobileGallery() ? raw * 2.5 : raw;
   scrollTarget = clampScroll(scrollTarget + delta);
   syncNavHintVisibility();
   lastTouchX = x;
@@ -2003,7 +2004,7 @@ const modeToggle = document.getElementById('modeToggle');
 function setTheme(t) {
   html.setAttribute('data-theme', t);
   const nextTheme = t === 'light' ? 'dark' : 'light';
-  modeToggle.querySelector('.mode-toggle-icon').textContent = t === 'light' ? '☾' : '☀';
+  modeToggle.querySelector('.mode-toggle-icon').textContent = t === 'light' ? '☽' : '○';
   modeToggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
   modeToggle.title = `Switch to ${nextTheme} mode`;
   localStorage.setItem('theme', t);
