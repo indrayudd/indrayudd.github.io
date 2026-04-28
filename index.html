@@ -583,10 +583,10 @@ body {
   gap: 6px;
 }
 .projects-title-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #22C55E;
-  animation: pulse 2.4s ease-in-out infinite;
+  color: #22C55E;
+  font-family: var(--font-mono);
+  font-size: inherit;
+  line-height: 1;
   flex-shrink: 0;
 }
 .projects-title-prompt {
@@ -766,10 +766,10 @@ body {
   pointer-events: none;
 }
 .term-header-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #22C55E;
-  animation: pulse 2.4s ease-in-out infinite;
+  color: #22C55E;
+  font-family: var(--font-mono);
+  font-size: inherit;
+  line-height: 1;
   flex-shrink: 0;
 }
 .term-header-cmd { opacity: 0.7; }
@@ -824,7 +824,7 @@ body {
 }
 [data-theme="light"] .links-frame .link-ssh-prompt { color: #6B7D3A; }
 [data-theme="light"] .links-frame .link-name { color: #2A2010; }
-[data-theme="light"] .links-frame .link-ssh-addr { color: #9A8A70; }
+[data-theme="light"] .links-frame .link-ssh-addr { color: #7A6A50; }
 [data-theme="light"] .links-frame .link-row:hover .link-ssh-prompt { color: #3A6020; }
 [data-theme="light"] .links-frame .link-row:hover .link-name { color: #0A0800; }
 
@@ -840,10 +840,10 @@ body {
   gap: 8px;
 }
 .links-frame-header-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: #22C55E;
-  animation: pulse 2.4s ease-in-out infinite;
+  color: #22C55E;
+  font-family: var(--font-mono);
+  font-size: inherit;
+  line-height: 1;
 }
 .link-row {
   display: flex;
@@ -884,8 +884,8 @@ body {
 .link-ssh-addr {
   font-family: var(--font-mono);
   font-size: var(--text-body);
-  color: #3A5A6A;
-  opacity: 0.5;
+  color: #5A8A9A;
+  opacity: 0.7;
   letter-spacing: 0.04em;
   align-self: flex-end;
   padding-bottom: 6px;
@@ -1445,7 +1445,7 @@ body {
         <div class="fp">
         <div class="projects-inner">
           <div class="projects-header" data-px="0.11">
-            <span class="projects-title"><div class="projects-title-dot"></div><span class="projects-title-prompt">~/projects</span> $ ls -la</span>
+            <span class="projects-title"><span class="projects-title-dot">&gt;</span><span class="projects-title-prompt">~/projects</span> $ ls -la</span>
             <span class="projects-count">4 entries</span>
           </div>
           <div class="projects-grid" data-px="0.03">
@@ -1502,7 +1502,7 @@ body {
     <div class="frame-slot" data-screen-label="03 About">
             <div class="frame about-frame">
         <div class="term-header">
-          <div class="term-header-dot"></div>
+          <span class="term-header-dot">&gt;</span>
           <span class="term-header-cmd"><span class="projects-title-prompt">~/about</span> $ cat README.md</span>
         </div>
         <div class="fp">
@@ -1533,7 +1533,7 @@ body {
             <div class="frame links-frame">
         <div class="fp">
         <div class="links-frame-header" data-px="0.04">
-          <div class="links-frame-header-dot"></div>
+          <span class="links-frame-header-dot">&gt;</span>
           <span>indro@remote:~$ open <span class="projects-title-prompt">--connections</span></span>
         </div>
         <a class="link-row" href="https://github.com/indrayudd" target="_blank" rel="noopener noreferrer">
@@ -1562,7 +1562,7 @@ body {
     <div class="frame-slot" data-screen-label="05 Let's Connect">
             <div class="frame connect-frame">
         <div class="term-header">
-          <div class="term-header-dot"></div>
+          <span class="term-header-dot">&gt;</span>
           <span class="term-header-cmd"><span class="projects-title-prompt">~/connect</span> $ <span style="color:var(--tangerine)">ping</span> indrayudd1@gmail.com</span>
         </div>
         <div class="fp">
