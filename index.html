@@ -397,7 +397,7 @@ body {
 .pfp-watermark {
   position: absolute;
   left: 50%;
-  top: calc(50% + 176px);
+  bottom: -52px;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -513,10 +513,11 @@ body {
 }
 .pfp-graph {
   position: absolute;
-  top: calc((268px - var(--frame-h)) / 2);
-  left: -25%;
+  top: 50%;
+  left: 50%;
   width: 150%;
-  height: var(--frame-h);
+  height: 300%;
+  transform: translate(-50%, -50%);
   z-index: 1;
   pointer-events: auto;
 }
@@ -1041,7 +1042,6 @@ body {
   .hero-meta { margin-top: 20px; }
   .hero-logo-side { width: 300px; }
   .pfp { width: 200px; height: 200px; }
-  .pfp-graph { top: calc((200px - min(calc(100vh - 180px), 520px)) / 2); }
   .about-manifesto { font-size: clamp(32px, 5.5vh, 48px); }
   .about-frame > .fp { padding: 44px 56px; }
   .about-sub { margin-top: 16px; font-size: 13px; }
@@ -1067,7 +1067,6 @@ body {
 @media (max-height: 560px) and (min-width: 761px) {
   .hero-logo-side { width: 260px; }
   .pfp { width: 180px; height: 180px; }
-  .pfp-graph { top: calc((180px - min(calc(100vh - 180px), 520px)) / 2); }
   .pfp-watermark { display: none; }
   .hero-text-side { padding: 24px 32px 24px 28px; }
   .hero-line { font-size: clamp(28px, 5vh, 42px); }
@@ -1207,10 +1206,8 @@ body {
   }
 
   .pfp-graph {
-    top: calc((min(45vw, 172px) - var(--frame-h)) / 2);
-    left: -20%;
     width: 140%;
-    height: var(--frame-h);
+    height: 250%;
   }
 
   .pfp-watermark {
