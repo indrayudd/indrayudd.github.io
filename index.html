@@ -1024,28 +1024,33 @@ body {
   :root { --text-display: clamp(36px, 5vw, 64px); --text-heading: clamp(20px, 2.2vw, 28px); }
 }
 
-/* Short screens (16:9 laptops with URL bar, ≤ 750px height) */
+/* Short screens (16:9 laptops with URL bar) */
 @media (max-height: 820px) and (min-width: 761px) {
   :root {
-    --frame-h: min(calc(100vh - 200px), 560px);
-    --frame-w: calc(var(--frame-h) * 1.6667);
+    --frame-h: min(calc(100vh - 180px), 520px) !important;
+    --frame-w: calc(var(--frame-h) * 1.6667) !important;
+    --text-display: clamp(36px, 6vh, 56px);
   }
-  :root { --text-display: clamp(36px, 6vh, 56px); }
   .hero-text-side { padding: 40px 48px 40px 40px; }
   .hero-meta { margin-top: 24px; }
   .hero-logo-side { width: 340px; }
   .pfp { width: 220px; height: 220px; }
   .pfp-graph { top: calc((220px - var(--frame-h)) / 2); }
-  .about-frame > .fp { padding: 56px 64px; }
-  .about-sub { margin-top: 24px; }
-  .about-footnote { margin-top: 28px; }
-  .links-frame > .fp { padding: 52px 72px 40px; }
-  .link-row { padding: 14px 0; }
-  .connect-frame > .fp { padding: 44px; }
-  .connect-rule { height: 28px; margin: 24px auto; }
-  .connect-status { margin-top: 32px; }
-  .projects-inner { padding: 36px 48px 36px; gap: 20px; }
-  .project-card { padding: 20px 28px; gap: 8px; }
+  .about-frame > .fp { padding: 48px 64px; }
+  .about-sub { margin-top: 20px; }
+  .about-footnote { margin-top: 24px; }
+  .links-frame > .fp { padding: 44px 72px 36px; }
+  .link-row { padding: 12px 0; }
+  .connect-frame > .fp { padding: 40px; }
+  .connect-rule { height: 24px; margin: 20px auto; }
+  .connect-status { margin-top: 28px; }
+  .projects-inner { padding: 28px 36px 24px; gap: 12px; }
+  .projects-header { gap: 2px; }
+  .project-card { padding: 14px 20px; gap: 5px; }
+  .project-name { font-size: 20px; }
+  .project-desc { font-size: 12px; line-height: 1.5; }
+  .project-tag { font-size: 10px; padding: 2px 6px; }
+  .project-num { font-size: 10px; }
 }
 
 @media (max-width: 760px) {
