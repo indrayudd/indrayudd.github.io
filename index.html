@@ -1026,31 +1026,41 @@ body {
 
 /* Short screens (16:9 laptops with URL bar) */
 @media (max-height: 820px) and (min-width: 761px) {
-  :root {
-    --frame-h: min(calc(100vh - 180px), 520px) !important;
-    --frame-w: calc(var(--frame-h) * 1.6667) !important;
-    --text-display: clamp(36px, 6vh, 56px);
+  .frame-slot {
+    flex: 0 0 min(calc((100vh - 180px) * 1.6667), 870px);
   }
-  .hero-text-side { padding: 40px 48px 40px 40px; }
-  .hero-meta { margin-top: 24px; }
-  .hero-logo-side { width: 340px; }
-  .pfp { width: 220px; height: 220px; }
-  .pfp-graph { top: calc((220px - var(--frame-h)) / 2); }
-  .about-frame > .fp { padding: 48px 64px; }
-  .about-sub { margin-top: 20px; }
-  .about-footnote { margin-top: 24px; }
-  .links-frame > .fp { padding: 44px 72px 36px; }
-  .link-row { padding: 12px 0; }
-  .connect-frame > .fp { padding: 40px; }
-  .connect-rule { height: 24px; margin: 20px auto; }
-  .connect-status { margin-top: 28px; }
-  .projects-inner { padding: 28px 36px 24px; gap: 12px; }
+  .frame {
+    width: min(calc((100vh - 180px) * 1.6667), 870px);
+    height: min(calc(100vh - 180px), 520px);
+  }
+  .frames-track {
+    padding: 0 calc(50vw - min(calc((100vh - 180px) * 1.6667), 870px)/2);
+  }
+  .hero-line { font-size: clamp(36px, 6vh, 56px); }
+  .hero-text-side { padding: 36px 40px 36px 36px; }
+  .hero-meta { margin-top: 20px; }
+  .hero-logo-side { width: 300px; }
+  .pfp { width: 200px; height: 200px; }
+  .pfp-graph { top: calc((200px - min(calc(100vh - 180px), 520px)) / 2); }
+  .about-manifesto { font-size: clamp(32px, 5.5vh, 48px); }
+  .about-frame > .fp { padding: 44px 56px; }
+  .about-sub { margin-top: 16px; font-size: 13px; }
+  .about-footnote { margin-top: 20px; }
+  .links-frame > .fp { padding: 40px 64px 32px; }
+  .link-name { font-size: clamp(32px, 6vh, 48px); }
+  .link-row { padding: 10px 0; }
+  .connect-frame > .fp { padding: 36px; }
+  .connect-email-btn { font-size: clamp(28px, 5vh, 40px); }
+  .connect-rule { height: 20px; margin: 16px auto; }
+  .connect-status { margin-top: 24px; }
+  .projects-inner { padding: 24px 32px 20px; gap: 10px; }
   .projects-header { gap: 2px; }
-  .project-card { padding: 14px 20px; gap: 5px; }
-  .project-name { font-size: 20px; }
-  .project-desc { font-size: 12px; line-height: 1.5; }
-  .project-tag { font-size: 10px; padding: 2px 6px; }
+  .project-card { padding: 12px 18px; gap: 4px; }
+  .project-name { font-size: 18px; }
+  .project-desc { font-size: 11px; line-height: 1.45; }
+  .project-tag { font-size: 10px; padding: 2px 5px; }
   .project-num { font-size: 10px; }
+  .project-tags { margin-top: 2px; gap: 4px; }
 }
 
 @media (max-width: 760px) {
